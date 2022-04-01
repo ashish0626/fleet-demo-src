@@ -2,7 +2,7 @@ spec:
   template:
     spec:
       containers:
-        - name: hello-world
+        - name: webapp
           env:
             - name: COW_COLOR
               value: green

@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world
+  name: webapp
   namespace: default
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: hello-world
+      app: webapp
   template:
     metadata:
       labels:
-        app: hello-world
+        app: webapp
     spec:
       containers:
-        - name: hello-world
-          image: bashofmann/rancher-demo:1.0.0
+        - name: webapp
+          image: docker pull ashish0786/webapp:latest
           imagePullPolicy: Always
           ports:
           - containerPort: 8080
