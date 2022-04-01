@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webapp
+  name: hpeui
   namespace: default
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: webapp
+      app: hpeui
   template:
     metadata:
       labels:
-        app: webapp
+        app: hpeui
     spec:
       containers:
-        - name: webapp
+        - name: hpeui
           image: bashofmann/rancher-demo:1.0.0
           imagePullPolicy: Always
           ports:

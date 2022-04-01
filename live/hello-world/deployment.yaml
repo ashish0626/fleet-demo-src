@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webapp
+  name: hpeui
   namespace: default
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: webapp
+      app: hpeui
   template:
     metadata:
       labels:
-        app: webapp
+        app: hpeui
     spec:
       containers:
-        - name: webapp
-          image: docker pull ashish0786/webapp:latest
+        - name: hpeui
+          image: 192.168.243.194:30443/library/samples/hpeui
           imagePullPolicy: Always
           ports:
           - containerPort: 8080

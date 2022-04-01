@@ -10,6 +10,6 @@ spec:
           pathType: Prefix
           backend:
             service: 
-              name: webapp-svclb
+              name: hpeui-svclb
               port:
                 number: 8080 
