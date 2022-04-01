@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: hpeui
-          image: 192.168.243.194:30443/library/samples/hpeui
+          image: 192.168.243.194:30443/library/samples/hpeui:v1.0.1
           imagePullPolicy: Always
           ports:
           - containerPort: 8080
